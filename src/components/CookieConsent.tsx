@@ -56,14 +56,14 @@ export const CookieConsent: React.FC<CookieConsentProps> = ({
           <button
             type="button"
             onClick={() => handleChoice(false)}
-            className="flex-1 sm:flex-none min-h-[40px] sm:min-h-[38px] px-3.5 py-2 border border-slate-500 hover:border-slate-300 bg-white/10 hover:bg-white/15 rounded-lg text-xs font-semibold text-white transition-colors whitespace-nowrap cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            className="flex-1 sm:flex-none min-h-[44px] sm:min-h-[38px] px-3.5 py-2 border border-slate-500 hover:border-slate-300 bg-white/10 hover:bg-white/15 rounded-lg text-xs font-semibold text-white transition-colors whitespace-nowrap cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
           >
             {isFrench ? 'Refuser optionnels' : 'Reject optional'}
           </button>
           <button
             type="button"
             onClick={() => handleChoice(true)}
-            className="flex-1 sm:flex-none min-h-[40px] sm:min-h-[38px] px-3.5 py-2 bg-[#B12D24] hover:bg-black border border-[#B12D24] text-white rounded-lg text-xs font-semibold transition-colors whitespace-nowrap cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            className="flex-1 sm:flex-none min-h-[44px] sm:min-h-[38px] px-3.5 py-2 bg-[#B12D24] hover:bg-black border border-[#B12D24] text-white rounded-lg text-xs font-semibold transition-colors whitespace-nowrap cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
           >
             {isFrench ? 'Tout accepter' : 'Accept all'}
           </button>

@@ -75,12 +75,17 @@ const KNOWN_TOP_LEVEL = [
   'fr',
   'senegal',
   'senegal-fr',
+  'home',
   'o-home',
   'o-ghana',
   'assets'
 ];
 
 export function getBasePath(): string {
+  const envBase = (import.meta as { env?: { BASE_URL?: string } }).env?.BASE_URL;
+  if (envBase && envBase.startsWith('/') && envBase !== '/') {
+    return envBase.endsWith('/') ? envBase.slice(0, -1) : envBase;
+  }
   if (typeof window === 'undefined') return '';
   const pathname = window.location.pathname;
   const segments = pathname.split('/').filter(Boolean);
@@ -88,7 +93,7 @@ export function getBasePath(): string {
     const firstSegment = segments[0].toLowerCase();
     // If the first segment is not a known application route, it is a repo/folder subpath
     if (!KNOWN_TOP_LEVEL.includes(firstSegment)) {
-      return `/${firstSegment}`;
+      return `/${segments[0]}`;
     }
   }
   return '';

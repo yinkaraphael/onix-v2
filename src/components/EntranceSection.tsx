@@ -51,7 +51,7 @@ export const EntranceSection: React.FC<EntranceSectionProps> = ({
           if (ref.current) observer.unobserve(ref.current);
         }
       },
-      { threshold: 0.2, rootMargin: '0px 0px -50px 0px' }
+      { threshold: 0.01, rootMargin: '0px 0px -10px 0px' }
     );
 
     if (ref.current) {
